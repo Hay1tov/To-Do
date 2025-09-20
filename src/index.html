@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="uz">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="./output.css">
+  <title>To‑Do List</title>
+</head>
+
+<body class="bg-slate-100 min-h-screen flex flex-col items-center p-6">
+
+  <h1 class="text-3xl font-bold mb-6 text-center">Drag & Drop <br> To Do List</h1>
+
+  <div class="flex gap-3 mb-6 w-full max-w-lg">
+    <input id="taskInput" type="text" placeholder="New Task ..."
+      class="flex-1 px-4 py-2 border border-[wheat] rounded-lg shadow-sm focus:outline-none focus:ring-1 focus:ring-indigo-300" />
+    <button id="addBtn" class="px-4 py-2 bg-yellow-500 text-white font-semibold rounded-lg hover:bg-yellow-600">Add New
+      Task</button>
+  </div>
+
+  <div class="grid grid-cols-4 gap-4 w-full max-w-5xl">
+    <div class="bg-orange-500 rounded-lg p-3 flex flex-col">
+      <h2 class="text-white font-bold mb-2">To Do</h2>
+      <div id="todo" class="flex-1 min-h-[200px] max-h-[400px] overflow-y-auto bg-white rounded-md p-2 space-y-2"></div>
+    </div>
+
+    <div class="bg-sky-500 rounded-lg p-3 flex flex-col">
+      <h2 class="text-white font-bold mb-2">Doing</h2>
+      <div id="doing" class="flex-1 min-h-[200px] max-h-[400px] overflow-y-auto bg-white rounded-md p-2 space-y-2">
+      </div>
+    </div>
+
+    <div class="bg-green-500 rounded-lg p-3 flex flex-col">
+      <h2 class="text-white font-bold mb-2">Done</h2>
+      <div id="done" class="flex-1 min-h-[200px] max-h-[400px] overflow-y-auto bg-white rounded-md p-2 space-y-2"></div>
+    </div>
+
+    <div class="bg-red-500 rounded-lg p-3 flex flex-col">
+      <h2 class="text-white font-bold mb-2">Trash</h2>
+      <div id="trash" class="flex-1 min-h-[200px] max-h-[400px] overflow-y-auto bg-white rounded-md p-2 space-y-2">
+      </div>
+      <button id="clearTrash" class="mt-2 w-full bg-red-600 text-white py-1 rounded hover:bg-red-700">Delete
+        All</button>
+    </div>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+
+</html>
